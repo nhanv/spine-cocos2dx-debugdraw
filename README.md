@@ -9,7 +9,7 @@ Debug drawing for Spine cocos2dx runtime
 
 ### Usage
 
-	  // Create and add skeletons to layer
+	  // Create and add skeletons to CCLayer as normal
 	  CSkeleton* skeletonNode1 = new CCSkeleton(skeletonData);
 	  CSkeleton* skeletonNode2 = new CCSkeleton(skeletonData);
 	  addChild(skeletonNode1);
@@ -20,11 +20,11 @@ Debug drawing for Spine cocos2dx runtime
 	  debugDrawNode->setPosition(CCPointZero);
 	  addChild(debugDrawNode, 1000);
 	  
-	  // Register skeletons with debug draw nodes
+	  // Register skeletons with our debug draw node
 	  debugDrawNode->getSkeletons()->addObject(skeletonNode1);
 	  debugDrawNode->getSkeletons()->addObject(skeletonNode2);
 	  
-	  // Enable/disable drawing slot bounding boxes or bones
+	  // Enable/disable drawing slot bounding boxes or bones if you wish
 	  debugDrawNode->setIsDrawingBones(false);             // true by default
   	  debugDrawNode->setIsDrawingSlotBoundingBoxes(false); // true by default
 
